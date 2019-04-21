@@ -72,13 +72,6 @@ public class CoojaSink extends AbstractCoojaMote {
 
 
 
-    public void getPck(NetworkPacket packet){
-        if (true){
-            Controller controller = Controller.getInstance();
-//            controller.handleIncommingPacket(packet);
-        }
-    }
-
     private class TcpSender implements Runnable {
 
         @Override

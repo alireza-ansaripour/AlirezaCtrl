@@ -101,9 +101,9 @@ public class SinkCore extends AbstractCore {
     public final void controllerTX(final NetworkPacket pck) {
         try {
             Controller controller  = Controller.getInstance();
-            controller.handleIncommingPacket(pck);
-            txControllerQueue.put(pck);
-            ((CoojaSink) mote).getPck(pck);
+//            controller.handleIncommingPacket(pck);
+            controller.txControllerQueue.put(pck);
+
         } catch (Exception ex) {
             log(Level.SEVERE, ex.toString());
         }

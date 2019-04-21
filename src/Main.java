@@ -128,11 +128,11 @@ public class Main {
             mote.sendReport();
         }
         System.out.println("fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuck");
-        SpanningTreeService.printTun();
-        HashMap<Integer, Set<Integer>> tree = SpanningTreeService.getSpanningTree();
-
-        drawTee(network, tree);
         scanner.nextInt();
+//        SpanningTreeService.printTun();
+        HashMap<Integer, Set<Integer>> tree = SpanningTreeService.getSpanningTree();
+        scanner.nextInt();
+        drawTee(network, tree);
         CoojaMote newMote = new CoojaMote(22);
         int[] neighbours = new int[]{5, 20};
         network.addNode(newMote, 47.48624088335269,-84.16577930100821);
@@ -143,7 +143,12 @@ public class Main {
         mote.sendBeacon();
         newMote.sendReport();
         SpanningTreeService.printTun();
+        scanner.nextInt();
         drawTee(network, tree);
+        while(true){
+            scanner.nextInt();
+            System.out.println(tree);
+        }
     }
 
     private static void drawTee(Network network, HashMap<Integer, Set<Integer>> tree) {
